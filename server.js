@@ -21,7 +21,6 @@ const sess = {
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-
 app.use(routes);
 
 sequelize.sync({force:false}).then(()=>{
