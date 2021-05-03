@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.loction.replace('/dashboard');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
@@ -34,17 +34,13 @@ const registerFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
     }
 };
 
-document
-.querySelector('.login-form')
-.addEventListener('submit', loginFormHandler);
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
-document
-.querySelector('.register-form')
-.addEventListener('submit', registerFormHandler);
+document.querySelector('.register-form').addEventListener('submit', registerFormHandler);
