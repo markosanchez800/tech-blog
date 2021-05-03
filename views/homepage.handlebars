@@ -1,3 +1,13 @@
-{{#each user as |user|}}
-<h1>{{user.userName}}</h1>
+{{#each blog}}
+<div class="card">
+  <div class="card-header">
+      <h1>{{title}}</h1>
+      <h2>Created at: {{createdAt}}</h2>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+     <h2>{{content}}</h2>
+    </blockquote>
+  </div>
+</div>
 {{/each}}

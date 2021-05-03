@@ -1,0 +1,12 @@
+[
+    {
+        "title":"Cool Post",
+        "content":"This is such a cool post",
+        "authorId":1
+    },
+    {
+        "title":"Cooler Post",
+        "content":"This is an even cooler post",
+        "authorId":2
+    }
+]
