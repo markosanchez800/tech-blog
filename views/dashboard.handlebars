@@ -2,7 +2,7 @@
 <br><br>
 <div class="card">
   <div class="card-header">
-      <h1>{{title}}</h1>
+      <h1><a href=/onepost>{{title}}</a></h1>
       <h2>Created on: {{format_date createdAt }}</h2>
   </div>
   <div class="card-body">
@@ -15,14 +15,20 @@
 {{/each}}
   <div class="col-md-8">
         <div class="card">
-        <h4>Leave a comment</h4>
-        <form class="form comment-form">
+           <h4>Title</h4>
+        <form class="form newp-form">
             <div class="form-group">
-                <input class="form-input" type="text" id="comment-body"/>
+                <input class="form-input" type="text" id="newp-title"/>
+            </div>
+        <h4>Content</h4>
+            <div class="form-group">
+                <input class="form-input input-lg" type="text" id="newp-body"/>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" type="submit">Comment</button>
+                <button class="btn btn-primary" type="submit">New Post</button>
             </div>
         </form>
         </div>
     </div>
+
+   <script src='./js/newp.js'></script>
