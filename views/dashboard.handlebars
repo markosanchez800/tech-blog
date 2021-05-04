@@ -2,7 +2,8 @@
 <br><br>
 <div class="card">
   <div class="card-header">
-      <h1><a href=/onepost>{{title}}</a></h1>
+      <h1><a href='/api/post/onepost'>{{title}}</a></h1>
+      <button id="deletebutton"><a href='/api/post/delete'>🗑</a></button>
       <h2>Created on: {{format_date createdAt }}</h2>
   </div>
   <div class="card-body">
@@ -30,5 +31,4 @@
         </form>
         </div>
     </div>
-
-   <script src='./js/newp.js'></script>
+<script src="/js/newp.js"></script>
