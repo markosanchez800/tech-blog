@@ -22,7 +22,7 @@ router.get('/dashboard', withAuth, async(req,res)=>{
 });
 
 
-router.post('/newp', async (req,res)=>{
+router.post('/newp', withAuth, async (req,res)=>{
     const authorId = {...req.body,authorId: req.session.user_id}
     try {
         const blogData = await Blog.create(authorId);
@@ -33,7 +33,7 @@ router.post('/newp', async (req,res)=>{
     }
 });
 
-router.get('/delete',async(req,res)=>{
+router.get('/delete', withAuth, async(req,res)=>{
     try {
         const deletePost = await Blog.destroy({
             where: {
@@ -46,7 +46,7 @@ router.get('/delete',async(req,res)=>{
     }
 });
 
-router.get('/onepost',async(req,res)=>{
+router.get('/onepost',withAuth, async(req,res)=>{
     try {
         const blogData = await Blog.findByPk(
             {
