@@ -11,3 +11,5 @@ const logout = async () => {
 };
 
 document.querySelector('#logout').addEventListener('click',logout);
+
+timeLimit(function(){document.location.replace('/logout');},600000);
