@@ -17,4 +17,15 @@ const newPosting = async (event) => {
     }
   };
 
+const deletePost = async (event) => {
+    event.preventDefault();
+    const response = await fetch('/api/post/delete');
+    if (response.ok){
+        document.location.replace('/api/post/dashboard');
+    } else {
+        alert(response.statusText);
+    }
+};
+
   document.querySelector('.newp-form').addEventListener('submit',newPosting);
+  document.querySelector('#deletebutton').addEventListener('click',deletePost);

@@ -33,7 +33,7 @@ router.post('/newp', withAuth, async (req,res)=>{
     }
 });
 
-router.get('/delete', withAuth, async(req,res)=>{
+router.delete('/delete', withAuth, async(req,res)=>{
     try {
         const deletePost = await Blog.destroy({
             where: {
