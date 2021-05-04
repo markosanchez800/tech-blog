@@ -3,8 +3,9 @@
 <div class="card">
   <div class="card-header">
       <h1><a href='/api/post/onepost'>{{title}}</a></h1>
-      <button id="deletebutton"><a href='/api/post/delete'>🗑</a></button>
       <h2>Created on: {{format_date createdAt }}</h2>
+       <button id="deletebutton"><a href='/api/post/delete'>Delete 🗑</a></button>
+       <button id="editbutton"><a href='/api/post/edit'>Edit 📝</a></button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
